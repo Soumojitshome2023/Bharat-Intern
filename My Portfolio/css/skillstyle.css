@@ -1,0 +1,68 @@
+#skill {
+    border: 5px solid yellow;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: first baseline;
+}
+
+#skillheading {
+    /* min-height: 20vh; */
+    padding: 2vw;
+    padding-bottom: 0;
+    margin-top: 12vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    text-shadow: 0 13.36px 8.896px #b49dc4, 0 -2px 1px #fff;
+    /* border: 5px solid rgb(62, 67, 77); */
+
+}
+
+#skillheading p {
+    font-size: calc(5rem + 2vw);
+    color: white;
+    font-weight: 900;
+}
+
+#skillheading p span {
+    color: rgb(218, 178, 3);
+}
+
+#skillbars {
+    /* border: 5px solid rgb(204, 204, 202); */
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.progressbar {
+    /* border: 5px solid rgb(139, 139, 0); */
+    /* height: 250px; */
+    /* width: 250px; */
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    margin: 10px 30px;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+@media (max-width: 900px) {
+    .progressbar {
+        padding: 5px;
+        margin: 5px;
+    }
+}

@@ -1,0 +1,215 @@
+nav {
+    /* border: 2px solid red; */
+    /* min-height: 10vh; */
+    /* height: auto; */
+    height: fit-content;
+    /* background-color: rgb(95, 95, 95); */
+    background-image: linear-gradient(45deg, black, rgb(138, 7, 7));
+    box-shadow: rgba(160, 163, 0, 0.541) 0px 14px 28px, rgba(72, 1, 112, 0.527) 0px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* z-index: 5; */
+
+}
+
+header {
+    width: 100vw;
+    position: fixed;
+    z-index: 5;
+}
+
+nav section {
+    /* border: 2px solid rgb(255, 208, 0); */
+    min-height: 10vh;
+    height: auto;
+    min-width: 40vw;
+    width: auto;
+    padding-right: 10vw;
+
+    display: flex;
+    align-items: center;
+
+}
+
+section .mypic {
+    /* border: 2px solid rgb(104, 104, 104); */
+    margin: 3px;
+    margin-left: 3vw;
+}
+
+section .mypic img {
+    width: calc(30px + 2vw);
+    border-radius: 50%;
+    box-shadow:
+        0 0 15px 0px #bb6a00,
+        0 0 15px 0px #efff14;
+}
+
+
+nav section ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav section ul li {
+    margin: 15px;
+    font-size: 2.2rem;
+    list-style: none;
+    color: white;
+}
+
+nav section ul li a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+nav section ul li a:hover {
+    text-decoration: underline;
+    color: yellow;
+}
+
+nav section p {
+    font-size: 3rem;
+    margin: 5px;
+    margin-left: 30px;
+    color: white;
+
+}
+
+.leftsec {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+}
+
+nav section[class="leftsec"] {
+    padding-right: 1px;
+}
+
+
+.hamberger img {
+    height: 6vh;
+}
+
+.hambergersvg {
+    fill: aliceblue;
+}
+
+.hamberger button {
+    background-color: rgba(126, 126, 126, 0);
+    border-style: none;
+    display: none;
+
+}
+
+
+.hamberger {
+    /* border: 5px solid white; */
+    margin: 10px;
+}
+
+
+#mobileopen {
+    /* border: 2px solid rgb(30, 255, 0); */
+    background-image: linear-gradient(45deg, rgb(117, 76, 0), rgb(49, 0, 80));
+    min-height: 10vh;
+    height: auto;
+    display: none;
+
+
+
+}
+
+#mobileopen ul {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#mobileopen li {
+    margin: 10px;
+    font-size: 3rem;
+    list-style: none;
+    color: white;
+}
+
+
+#mobileopen li a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+#mobileopen li a:hover {
+    text-decoration: underline;
+    color: yellow;
+}
+
+#finham {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    #control {
+        display: none;
+        /* border: 2px solid rgb(17, 0, 255);
+        background-color: black; */
+
+    }
+
+    .hamberger button {
+        display: block;
+
+    }
+
+    .hamberger button:hover {
+        cursor: pointer;
+
+
+    }
+
+    nav section {
+        /* border: 2px solid rgb(255, 208, 0); */
+        min-height: 10vh;
+        height: auto;
+        min-width: 10vw;
+        width: auto;
+        padding-right: 2vw;
+
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    section .mypic img {
+        width: calc(35px + 2vw);
+
+    }
+
+    nav section .hamberger {
+        max-width: 10vw;
+    }
+
+    nav section p {
+        font-size: 3rem;
+        margin: 20px;
+        margin-left: 5vw;
+        color: white;
+
+    }
+
+    nav {
+        max-height: 12vh;
+    }
+
+
+
+}

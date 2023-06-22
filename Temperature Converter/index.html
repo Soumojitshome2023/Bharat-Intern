@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+
+        body {
+            /* border: 5px solid rgb(10, 43, 233); */
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(45deg, rgb(155, 0, 0), rgb(75, 0, 124));
+            overflow: hidden;
+
+        }
+
+        #convert {
+            background: linear-gradient(purple, blue);
+        }
+
+        #clear {
+            background: linear-gradient(purple, blue);
+        }
+
+        #convert:hover {
+            background: linear-gradient(45deg, purple, blue);
+        }
+
+        #clear:hover {
+            background: linear-gradient(45deg, purple, blue);
+        }
+
+        h1 {
+            font-family: sans-serif;
+            color: #ffffff;
+        }
+
+        input {
+            display: block;
+            width: calc(110px + 7vw);
+            padding: 10px;
+            margin: 10px;
+            font-size: calc(15px + 1.6vw);
+            background-color: #575658;
+            font-family: cursive, sans-serif;
+            border: 2px solid rgb(58, 58, 58);
+            border-radius: 10px;
+            color: white;
+            height: 40px;
+        }
+
+        ::-webkit-input-placeholder {
+            color: #b1b1b1;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 1.2em;
+            color: #ffffff;
+            width: 100px;
+            height: 50px;
+
+            border-radius: 10px;
+            border: 2px solid yellow;
+
+        }
+
+        .cont {
+            /* border: 5px solid black; */
+            text-align: center;
+            margin-top: 20vh;
+            width: 100vw;
+
+        }
+
+        .heading {
+            display: flex;
+            justify-content: center;
+            font-size: calc(20px + 2vw);
+            margin-bottom: 30px;
+        }
+
+        .inpt {
+            /* border: 5px solid rgb(177, 17, 17); */
+            display: flex;
+            height: auto;
+            padding: 2px;
+            margin: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+
+        }
+
+        .btn {
+            /* border: 5px solid rgb(240, 151, 18); */
+            height: 10vh;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="cont">
+        <h1 class="heading">Temperature Converter</h1>
+
+        <div class="inpt">
+
+            <input type="text" id="fahrenheit" placeholder="Fahrenheit" name="f" value="" />
+
+            <input type="text" id="celsius" placeholder="Celsius" name="c" value="" />
+        </div>
+        <div class="btn">
+
+            <button id="convert">Convert!</button>
+            <button id="clear">Reset</button>
+        </div>
+    </section>
+
+</body>
+<script>
+    document.getElementById('convert').onclick = tempConvert;
+    document.getElementById('clear').onclick = clearForm;
+
+    function tempConvert() {
+
+        var fahrenheit = document.getElementById("fahrenheit").value;
+        var celsius = document.getElementById("celsius").value;
+
+        if (fahrenheit != '') {
+            celsius = (parseFloat(fahrenheit) - 32) / 1.8;
+        } else {
+            fahrenheit = (parseFloat(celsius) * 1.8) + 32;
+        }
+
+
+
+        document.getElementById('fahrenheit').value = parseFloat(fahrenheit).toFixed(1);
+        document.getElementById('celsius').value = parseFloat(celsius).toFixed(1);
+    }
+
+
+    function clearForm() {
+        document.getElementById('fahrenheit').value = '';
+        document.getElementById('celsius').value = '';
+    }
+
+
+
+
+</script>
+
+</html>

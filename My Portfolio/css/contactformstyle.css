@@ -1,0 +1,143 @@
+form {
+    /* border: 5px solid green; */
+
+    margin-top: 20px;
+    border-radius: 30px;
+    height: fit-content;
+    /* width: 30vw; */
+    width: fit-content;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    /* background-image: linear-gradient(45deg, rgb(99, 13, 13), rgb(94, 94, 0)); */
+    box-shadow:
+        0 0 20px 0px #a56b00,
+        0 0 15px 0px #848578;
+}
+
+input {
+    height: 40px;
+    border: 2px solid rgb(104, 104, 104);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    color: white;
+    background-color: rgba(68, 68, 73, 0);
+
+
+}
+
+textarea {
+    border: 2px solid rgb(104, 104, 104);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    color: white;
+    background-color: rgba(68, 68, 73, 0);
+
+}
+
+.formheading {
+    /* border: 5px solid rgb(109, 128, 0); */
+    display: flex;
+    width: fit-content;
+    text-align: center;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 10px;
+    height: fit-content;
+    margin: 10px;
+    box-shadow:
+        0 0 20px 0px #8315a5,
+        0 0 15px 0px #848578;
+
+}
+
+.formheading p {
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    margin: 0;
+}
+
+input:hover {
+    box-shadow:
+        0 0 15px 0px #a56b15,
+        0 0 15px 0px #848578;
+}
+
+input:focus {
+    box-shadow:
+        0 0 15px 0px #a56b15,
+        0 0 15px 0px #848578;
+}
+
+textarea:focus {
+    box-shadow:
+        0 0 15px 0px #a56b15,
+        0 0 15px 0px #848578;
+}
+
+.inpt {
+    /* border: 5px solid rgb(205, 206, 201); */
+    border-radius: 30px;
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+
+    box-shadow:
+        0 0 20px 0px #8315a5,
+        0 0 15px 0px #848578;
+
+}
+
+#submitbtn {
+    border-radius: 20px;
+    height: 40px;
+    border: none;
+    margin: 10px 0;
+    width: 100%;
+}
+
+#submitbtn:hover {
+    cursor: pointer;
+    background-image: linear-gradient(90deg, red, pink, yellow);
+}
+
+#submitbtn:active {
+    background-image: linear-gradient(90deg, rgb(98, 0, 255), pink, rgb(21, 255, 0));
+    box-shadow:
+        0 0 15px 0px #a56b15,
+        0 0 15px 0px #848578;
+}
+
+#submitbtn[disabled]:hover {
+    /* Remove or override hover styles */
+    background-image: none;
+    cursor: not-allowed;
+}
+
+#submitbtn[disabled]:active {
+    background-image: none;
+    box-shadow: none;
+}
+
+
+@media (max-width: 500px) {
+    form {
+        padding: 2px;
+    }
+}

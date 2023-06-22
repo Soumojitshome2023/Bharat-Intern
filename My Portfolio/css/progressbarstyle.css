@@ -1,0 +1,62 @@
+.circular-progress {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#8300cf 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.progress-value {
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    color: #7d2ae8;
+}
+
+.pgbartext {
+    font-size: 30px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+
+@media (max-width: 820px) {
+
+    .circular-progress {
+
+        height: 100px;
+        width: 100px;
+
+    }
+
+    .circular-progress::before {
+
+        height: 80px;
+        width: 80px;
+
+    }
+
+    .progress-value {
+
+        font-size: 20px;
+
+    }
+
+    .pgbartext {
+        font-size: 20px;
+
+    }
+
+}
